@@ -1,0 +1,195 @@
+---
+title: Contact and Support
+description: Find the best ways to contact the team, schedule a visit, and prepare the information needed for a faster response.
+---
+
+## Overview
+
+Use this page as a starter kit for your contact and support process. You can adapt the channels, response times, and booking flow to match your team’s actual operating hours and service model.
+
+For Diseño Dekora, the goal is simple: help people reach the right channel quickly, prepare the right project details, and move from first contact to a scheduled visit without friction. The sections below give you a reusable structure for that workflow.
+
+<Callout kind="info">
+
+This is sample documentation for a starter kit. Replace the examples with your own phone numbers, forms, social profiles, and service policies.
+
+</Callout>
+
+## Contact channels
+
+Choose the channel that matches the urgency of the request. A clear routing model helps you reduce back-and-forth and gives customers a faster answer.
+
+<Columns cols={3}>
+  <Card title="Website form" icon="book-open" href="https://www.dekoraintegrales.com/contactanos" target="_blank">
+    Best for new project inquiries, quote requests, and visit scheduling.
+  </Card>
+  <Card title="Email support" icon="mail" href="mailto:hello@decorastudio.example.com">
+    Best for detailed briefs, attachments, and follow-up after an initial conversation.
+  </Card>
+  <Card title="Social media" icon="external-link" href="https://www.instagram.com" target="_blank">
+    Best for quick inspiration, portfolio browsing, and lightweight follow-up.
+  </Card>
+</Columns>
+
+### When to use each channel
+
+| Channel | Best for | Typical response |
+| --- | --- | --- |
+| Website form | New leads and booking requests | Same business day |
+| Email | Detailed project information | One to two business days |
+| Social media | Casual questions and inspiration | Varies by platform |
+
+## Booking an in-person visit
+
+Use a simple booking flow so clients know what to expect before they arrive. This is especially helpful when you need to review measurements, materials, and budget in person.
+
+<Steps>
+  <Step title="Submit your request" icon="send">
+    
+    Ask the client to share the project type, preferred date, and contact details.
+
+  </Step>
+  <Step title="Confirm availability" icon="calendar">
+    
+    Check your calendar and propose one or two visit windows.
+
+  </Step>
+  <Step title="Share the location and instructions" icon="map-pin">
+    
+    Send the address, parking guidance, and any access details needed for the visit.
+
+  </Step>
+  <Step title="Prepare the meeting" icon="clipboard-check">
+    
+    Review the project summary before the appointment so you can give focused guidance.
+
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+
+If you expect a high volume of visits, add a booking link and a short intake form to collect details before the meeting.
+
+</Callout>
+
+## Required project details
+
+Request the same core information from every lead. That makes it easier for your team to estimate effort, plan the visit, and respond consistently.
+
+<ParamField body="projectType" param-type="string" required="true">
+  Describe the space or product you want to design, such as kitchen, closet, or bathroom furniture.
+</ParamField>
+
+<ParamField body="location" param-type="string" required="true">
+  Share the city or neighborhood so the team can confirm travel and service coverage.
+</ParamField>
+
+<ParamField body="approximateBudget" param-type="string" required="false">
+  Provide a budget range to help the team suggest realistic options.
+</ParamField>
+
+<ParamField body="preferredTimeline" param-type="string" required="false">
+  Tell the team when you would like the project to start or be completed.
+</ParamField>
+
+### Example intake payload
+
+```json
+{
+  "name": "Laura Pérez",
+  "projectType": "Kitchen renovation",
+  "location": "Medellín, Antioquia",
+  "approximateBudget": "COP 18,000,000 to COP 25,000,000",
+  "preferredTimeline": "Within the next 6 weeks",
+  "contactMethod": "WhatsApp"
+}
+```
+
+## Response expectations
+
+Set expectations early so clients understand when and how they will hear back. A transparent process improves trust and reduces duplicate messages.
+
+<Tabs>
+  <Tab title="Initial inquiry" icon="message-circle">
+    
+    Acknowledge the request, confirm the best contact method, and share the next step.
+
+  </Tab>
+  <Tab title="Visit scheduling" icon="calendar">
+    
+    Offer available time slots and confirm the address once the client selects a window.
+
+  </Tab>
+  <Tab title="Project follow-up" icon="file-text">
+    
+    Share notes, next actions, and any documents needed to continue the conversation.
+
+  </Tab>
+</Tabs>
+
+## Communication workflow
+
+A small workflow keeps support consistent across team members and makes handoff easier when several people manage the inbox.
+
+<CodeGroup tabs="Webhook,Email">
+  ```bash
+curl -X POST https://your-webhook-url.com/webhook \
+  -H "Content-Type: application/json" \
+  -d '{
+    "event": "new_contact_request",
+    "name": "Laura Pérez",
+    "projectType": "Kitchen renovation",
+    "phone": "+57 300 123 4567"
+  }'
+  ```
+  ```plaintext
+Subject: New contact request from Laura Pérez
+
+Hello team,
+
+A new project request has arrived through the contact form.
+Project type: Kitchen renovation
+Location: Medellín, Antioquia
+Preferred timeline: Within the next 6 weeks
+
+Please review and reply within one business day.
+  ```
+</CodeGroup>
+
+## Social media and follow-up
+
+Use social channels to reinforce your brand voice and keep the conversation going after the first contact. You can share project highlights, behind-the-scenes updates, and reminders to book a visit.
+
+<ExpandableGroup>
+  <Expandable title="What should I send after the first reply?" default-open="true">
+
+    Send a short confirmation, restate the requested service, and list the next step.
+
+  </Expandable>
+  <Expandable title="How do I handle missed appointments?" default-open="false">
+
+    Offer a polite reschedule option and ask the client to confirm a new time.
+
+  </Expandable>
+  <Expandable title="What if I need more project details?" default-open="false">
+
+    Request measurements, reference images, and any material preferences before quoting.
+
+  </Expandable>
+</ExpandableGroup>
+
+## Support checklist
+
+Before you publish this page, verify that your live version includes your real channels, your actual response times, and your preferred booking process. Keep the language concise and action-oriented so clients can move from interest to contact without confusion.
+
+- Confirm the active contact links.
+- Replace sample email and webhook values.
+- Review the visit booking instructions.
+- Update response time commitments.
+- Link your social profiles and follow-up policy.
+
+<Callout kind="success">
+
+A clear contact page works best when you keep every field, message, and next step consistent across your website, inbox, and social profiles.
+
+</Callout>
